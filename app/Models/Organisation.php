@@ -19,4 +19,9 @@ class Organisation extends Model
     {
         return $this->hasMany(Survey::class);
     }
+
+    public function contacts(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Contact::class);
+    }
 }
