@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Ask;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -29,4 +29,12 @@ class Survey extends Model
     {
         return $this->belongsTo(Organisation::class);
     }
+
+    public function contacts(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Contact::class, 'invitations')
+            ->withPivot('invited_at');
+    }
+
+    
 }
