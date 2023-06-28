@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Ask\Survey;
+use App\Models\Survey;
 use App\Models\Organisation;
 
 test('can create survey', function () {
