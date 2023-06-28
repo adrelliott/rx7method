@@ -33,8 +33,17 @@ class Survey extends Model
     public function contacts(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(Contact::class, 'invitations')
+            // ->as('invitation')
             ->withPivot('invited_at');
     }
+
+    // public function inviteContacts($contacts, $invitedAt = null): void
+    // {
+    //     if( ! $invitedAt) {
+    //         $invitedAt = now();
+        // }
+    //     $this->contacts()->attach($contacts);
+    // }
 
     
 }

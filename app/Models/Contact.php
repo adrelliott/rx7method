@@ -23,4 +23,10 @@ class Contact extends Model
         return $this->belongsTo(Organisation::class);
     }
 
+    public function surveys(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(Survey::class, 'invitations')
+            ->withPivot('invited_at');
+    }
+
 }
