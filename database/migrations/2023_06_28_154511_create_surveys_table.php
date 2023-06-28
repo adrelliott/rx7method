@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('surveys', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->text('intro_text')->nullable();
             $table->text('outro_text')->nullable();
             $table->boolean('is_template')->default(0);
