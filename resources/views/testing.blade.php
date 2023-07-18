@@ -33,7 +33,7 @@
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
-                    <h1>Testing route</h1>
+                    <h1>Testing route on staging</h1>
                 </div>
 
                 <div div class="mt-16">
