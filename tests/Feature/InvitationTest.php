@@ -4,7 +4,6 @@ use App\Actions\Invitations\InviteContactsToSurvey;
 use App\Models\Survey;
 use App\Models\Contact;
 use App\Models\Organisation;
-use Carbon\Carbon;
 
 beforeEach(function() {
     $this->organisation = Organisation::factory()
@@ -38,7 +37,7 @@ test('can invite multiple contacts to a survey', function () {
 });
 
 test('can invite contacts to survey but with a future date', function () {
-    $inviteDate = now()->addDays(5)->format('Y-m-d H:i:s');
+    $inviteDate = now()->addDays(5);
     app(InviteContactsToSurvey::class)->handle(
         $this->organisation->surveys->first(), 
         $this->organisation->contacts->take(5)->pluck('id')->toArray(),
