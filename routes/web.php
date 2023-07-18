@@ -20,8 +20,6 @@ Route::domain('ask.' . env('APP_DOMAIN'))->group(function () {
     // });
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route:view('/','welcome');
 
 Route::view('/test', 'testing');
