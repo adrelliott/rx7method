@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::domain('ask.' . env('APP_DOMAIN'))->group(function () {
+    Route::view('/', 'surveys.home');
+    // Route::get('user/{id}', function (string $account, string $id) {
+    //     // ...
+    // });
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('/test', 'testing');
