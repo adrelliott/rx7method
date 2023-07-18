@@ -24,6 +24,6 @@ Route::domain('ask.' . env('APP_DOMAIN'))->group(function () {
 //     return view('welcome');
 // });
 
-Route::view('/','welcome');
+Route::view('/','home');
 
 Route::view('/test', 'testing');
